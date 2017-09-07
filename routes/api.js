@@ -18,7 +18,7 @@ router.get('/notes', (req, res, next) => {
         var username = req.session.user.username
     }
 
-    successMsg = username ? `Welcome back, ${username}` : `Welcome to visit`
+    let successMsg = username ? `Welcome back, ${username}` : `Welcome to visit`
     Note.findAll(opts).then((notes) => {
         res.send({ status: 0, data: notes, successMsg: successMsg });
     }).catch(() => {
