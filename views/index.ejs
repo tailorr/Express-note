@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta property="qc:admins" content="4562636714562571563145" />
+    <title>Note</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+    <div id="header">
+        <h1 class="logo">TAIL NOTE</h1>
+        <ul class="user-area">
+            <% if (isLogin){ %>
+                <li><img src="<%= user.avatar %>" alt=""></li>
+                <li><span title="<%= user.username %>"><%= user.username %></span></li>
+                <li><span class="line"> | </span> </li>
+                <li><a class="logout" href="/auth/logout">Sign Out</a></li>
+                <%} else { %>
+                    <li>
+                        <a class="login" title="GitHub Login" href="/auth/github">GitHub Login</a>
+                    </li>
+                    <% } %>
+        </ul>
+    </div>
+    <div id="taskbar">
+        <a class="add-note" title="Add New Note" href="#">New</a>
+        <a class="empty-note" title="Empty Note" href="#">Empty</a>
+    </div>
+    <div id="content"></div>
+    <script src="/js/index.js"></script>
+</body>
+
+</html>

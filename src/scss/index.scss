@@ -1,0 +1,139 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+}
+
+h1 {
+    margin: 0;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font: 18px/1.4 'arial';
+    color: #0B1013;
+}
+
+a {
+    text-decoration: none;
+    color: #0B1013;
+}
+
+#header {
+    padding: 0 20px;
+    background: #fafafa;
+    border-bottom: 1px solid #EBEDF1;
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .logo {
+        margin-top: 8px;
+        float: left;
+        font-size: 25px;
+        text-align: center;
+        &:before,
+        &:after {
+            content: "";
+            display: block;
+            width: 100px;
+            margin: 0 auto;
+            height: 1px;
+            background: #000;
+            animation: logo 1s;
+        }
+    }
+    .user-area {
+        a {
+            line-height: 50px;
+        }
+        float: right;
+        li {
+            float: left;
+            margin-left: 5px;
+            span {
+                line-height: 50px;
+                display: block;
+            }
+        }
+        img {
+            height: 30px;
+            margin-top: 10px;
+            border-radius: 50%;
+        }
+    }
+    .login {
+        float: right;
+        margin-left: 16px;
+        &:hover {
+            color: #777;
+        }
+    }
+    .logout:hover {
+        color: #777;
+    }
+}
+
+#taskbar {
+    padding: 25px 20px 15px;
+    font-size: 14px;
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .add-note,
+    .empty-note {
+        padding: 5px 10px;
+        background: #D75455;
+        color: #F0F0F0;
+        border-radius: 2px;
+        box-shadow: 0 0px 0px 1px rgba(215, 84, 85, 0.6);
+        &:hover {
+            color: #fff
+        }
+    }
+    .empty-note {
+        margin-left: 20px;
+    }
+}
+
+#content {
+    position: relative;
+    min-height: calc(100% - 110px);
+    background: #fafafa;
+}
+
+@media (max-width:1200px) {
+    #container {
+        width: 960px;
+    }
+}
+
+@media (max-width:960px) {
+    #container {
+        width: 720px;
+    }
+}
+
+@media (max-width:720px) {
+    #container {
+        width: 480px;
+    }
+}
+
+@keyframes logo {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100px;
+    }
+}
