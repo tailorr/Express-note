@@ -21,7 +21,7 @@ passport.deserializeUser((obj, done) => {
 passport.use(new GitHubStrategy({
         clientID: '35a35302ee7ed628fb10',
         clientSecret: 'd85424273113be0d4271fdda62eecb6decc797f1',
-        callbackURL: "http://127.0.0.1:5000/auth/github/callback"
+        callbackURL: "http://47.91.156.35:2222/auth/github/callback"
     },
     (accessToken, refreshToken, profile, done) => {
         // User.findOrCreate({ githubId: profile.id }, function (err, user) {
